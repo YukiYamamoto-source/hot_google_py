@@ -35,4 +35,4 @@ def main():
 if __name__ == "__main__":
     logging.info("Start hot_google_py.")
     keyboard.add_hotkey("ctrl+alt+c", main)
-    keyboard.wait("ctrl+alt+space")
+    keyboard.wait("ctrl+alt+f")
