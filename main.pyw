@@ -24,7 +24,7 @@ logging.basicConfig(filename='myapp.log', level=logging.INFO)
 def main():
     """main"""
     word = pyperclip.paste().replace(" ", "+")
-    url = f"https://www.google.com/search?q=%22{word}%22+define"
+    url = f"https://www.google.com/search?q={word}+meaning"
     exe_str = f"start {url}"
     logging.info("searched words: %s", str(word))
     _ = subprocess.Popen(exe_str, shell=True,
@@ -34,5 +34,5 @@ def main():
 
 if __name__ == "__main__":
     logging.info("Start hot_google_py.")
-    keyboard.add_hotkey("ctrl+shift+space", main)
+    keyboard.add_hotkey("ctrl+alt+c", main)
     keyboard.wait("ctrl+alt+space")
